@@ -1,0 +1,13 @@
+test_interview:
+    resource: "@TestInterviewBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+api_municipios_nombre_provincia:
+    resource: "@TestInterviewBundle/Controller/"
+    type:     annotation
+    prefix:   /

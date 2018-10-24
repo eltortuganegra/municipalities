@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script language="JavaScript">
+        $(document).ready(function() {
+            $.getJSON("/api/municipios/{{ nombreDeProvincia }}", function(data) {
+                $.each(data, function(key, municipio) {
+                    $( ".municipios" ).append( "<li>" + municipio.nombre + "</li>" );
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<h1> Municipios {{ nombreDeProvincia }}</h1>
+<section>
+    <ul class="municipios">
+    </ul>
+</section>
+
+</body>
+</html>
